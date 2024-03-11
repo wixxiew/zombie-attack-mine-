@@ -1,4 +1,5 @@
---Credits to wixxiew
+--THIS SHITTY GUI WAS MADE BY WIXXIEW (i will make better gui soon and make more feautures ig)
+--enjoy fucking zombies with exploits! :)
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -6,11 +7,13 @@ local AutoFarm = Instance.new("TextButton")
 local Aimbot = Instance.new("TextButton")
 local ESP = Instance.new("TextButton")
 local Noclip = Instance.new("TextButton")
+local CloseOrOpen = Instance.new("TextButton")
 
 --Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
@@ -116,7 +119,9 @@ Aimbot.Text = "Aimbot"
 Aimbot.TextColor3 = Color3.fromRGB(61, 255, 17)
 Aimbot.TextSize = 35.000
 Aimbot.TextWrapped = true
-Aimbot.Text = "NOT WORKING"
+Aimbot.MouseButton1Click:Connect(function()
+	Aimbot.Text = ("Not working rn")
+end)
 
 ESP.Name = "ESP"
 ESP.Parent = Frame
@@ -368,4 +373,22 @@ Noclip.MouseButton1Click:connect(function()
 
 end)
 
---CREDITS TO ME (WIXXIEW)
+
+CloseOrOpen.Name = "CloseOrOpen"
+CloseOrOpen.Parent = ScreenGui
+CloseOrOpen.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+CloseOrOpen.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CloseOrOpen.BorderSizePixel = 0
+CloseOrOpen.Position = UDim2.new(0, 0, 0.445969135, 0)
+CloseOrOpen.Size = UDim2.new(0, 57, 0, 50)
+CloseOrOpen.Font = Enum.Font.SourceSans
+CloseOrOpen.Text = "W"
+CloseOrOpen.TextColor3 = Color3.fromRGB(111, 255, 0)
+CloseOrOpen.TextScaled = true
+CloseOrOpen.TextSize = 14.000
+CloseOrOpen.TextWrapped = true
+CloseOrOpen.MouseButton1Click:connect(function()
+	Frame.Visible = false
+end)
+
+--kys
